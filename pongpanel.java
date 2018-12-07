@@ -21,8 +21,8 @@ public class pongpanel extends JPanel{
 	int intC = 0;
 	int intBallX = 630;
 	int intBallY = 360;
-	int vx = -5;
-	int vy = 5;
+	int vx = -10;
+	int vy = 10;
 	int intP1Score = 0;
 	int intP2Score = 0;
 	// Methods
@@ -64,9 +64,9 @@ public class pongpanel extends JPanel{
 			vx = -5;
 		}*/
 		if(intBallY <= 20){
-			vy = 5;
+			vy = vy;
 		}else if(intBallY >= 700){
-			vy = -5;
+			vy = -vy;
 		}
 		// Paddle Interaction - Collision Detection
 		if(intBallX >= intP1X&& intBallX <= intP1X+ intWidth){
@@ -87,15 +87,15 @@ public class pongpanel extends JPanel{
 		if(intBallX <= 0){
 			intBallX = 630;
 			intBallY = 360;
-			vx = 5;
-			vy = 5;
+			vx = vx;
+			vy = vy;
 			intP2Score = intP2Score + 1;
 		}
 		if(intBallX >= 1280){
 			intBallX = 630;
 			intBallY = 360;
-			vx = -5;
-			vy = 5;
+			vx = -vx;
+			vy = vy;
 			intP1Score = intP1Score + 1;
 		}			
 	}
