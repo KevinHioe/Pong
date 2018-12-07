@@ -1,3 +1,5 @@
+// My first wing animation game of PONG
+// Made by: Kevin Hioe on 12/7/2018
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
