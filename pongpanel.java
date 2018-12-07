@@ -37,9 +37,10 @@ public class pongpanel extends JPanel{
 			g.fillRect(630, 20 + (intC * intY), 20, 20);
 		}
 		// Paddles
-		g.setColor(Color.WHITE);
+		g.setColor(Color.RED);
 		g.fillRect(intP1X, intP1Y, intWidth, intHeight);
 		g.fillRect(intP2X, intP2Y, intWidth, intHeight);
+		g.setColor(Color.WHITE);
 		// Paddle Movement
 		if(blnP1Down && intP1Y != 620){ 
 			intP1Y = intP1Y + 10;
@@ -64,9 +65,9 @@ public class pongpanel extends JPanel{
 			vx = -5;
 		}*/
 		if(intBallY <= 20){
-			vy = vy;
+			vy = 10;
 		}else if(intBallY >= 700){
-			vy = -vy;
+			vy = -10;
 		}
 		// Paddle Interaction - Collision Detection
 		if(intBallX >= intP1X&& intBallX <= intP1X+ intWidth){
@@ -87,15 +88,15 @@ public class pongpanel extends JPanel{
 		if(intBallX <= 0){
 			intBallX = 630;
 			intBallY = 360;
-			vx = vx;
-			vy = vy;
+			vx = 10;
+			vy = 10;
 			intP2Score = intP2Score + 1;
 		}
 		if(intBallX >= 1280){
 			intBallX = 630;
 			intBallY = 360;
-			vx = -vx;
-			vy = vy;
+			vx = -10;
+			vy = 10;
 			intP1Score = intP1Score + 1;
 		}			
 	}
