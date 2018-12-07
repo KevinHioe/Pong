@@ -48,6 +48,7 @@ public class pongprogram implements ActionListener, KeyListener, MouseMotionList
 	public void mouseClicked(MouseEvent evt){
 	
 	}
+	// This is an overridden method for Mouse Motion Listener
 	public void mouseMoved(MouseEvent evt){
 		int R = evt.getY();
 		if(R >= 20 && R <= 620){
